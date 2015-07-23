@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')(process.env.MONGOLAB_URI);
+var db = require('monk')(process.env.MONGOLAB_URI || process.env.HOST);
 var articleCollection = db.get('articles');
 var validate = require('../lib/logic.js');
-var dom = require('../public/javascripts/dom.js');
+var para = require ('../lib/para.js');
 
 
 /* GET home page. */

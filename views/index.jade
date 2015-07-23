@@ -1,23 +1,26 @@
 extends layout
 
 block content
-    div.header
-      h1 The Zine
+    a(href="/")
+      div.header
+        h1 The Zine
     div.content
       h2
         a(href="/articles/new") New Article
     div
-      if article
+        
         each article in allArticles.reverse()
           if(article.dark)
             .dark
-              h1
-                a(href="/articles/" + article._id + '/show' )=article.title
+              .headingDark
+                h1
+                  a(href="/articles/" + article._id + '/show' )=article.title
               p=article.excerpt
           else
             .light
-              h1
-                a(href="/articles/" + article._id + '/show' )=article.title
+              .headingLight
+                h1
+                  a(href="/articles/" + article._id + '/show' )=article.title
               p=article.excerpt
               
             

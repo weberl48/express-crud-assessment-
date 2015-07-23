@@ -90,10 +90,11 @@ label {
 
 .dark {
   background-image: url(article.background);
-  background-color: black;
-  color: white;
-  padding: 10px;
-  width: 97%;
+  background-color: white;
+  color: black;
+
+
+  width: 99%;
 }
 .dark a {
   color: white;
@@ -107,5 +108,19 @@ label {
 .light {
   background-color: white;
   padding: 10px;
-  width: 97%
+  width: 97.5%
+}
+.headingLight {
+  background-color:white;
+  width:100%;
+  margin:0 auto;
+}
+.headingDark {
+  background-color: black;
+  width 100%;
+  margin:0 auto;
+}
+
+.dark p {
+  padding:10px;
 }
