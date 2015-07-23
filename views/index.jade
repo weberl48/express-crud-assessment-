@@ -7,16 +7,17 @@ block content
       h2
         a(href="/articles/new") New Article
     div
-      each article in allArticles.reverse()
-        if(article.dark)
-          .dark
-            h1
-              a(href="/articles/" + article._id + '/show' )=article.title
-            p=article.excerpt
-        else
-          .light
-            h1
-              a(href="/articles/" + article._id + '/show' )=article.title
-            p=article.excerpt
+      if article
+        each article in allArticles.reverse()
+          if(article.dark)
+            .dark
+              h1
+                a(href="/articles/" + article._id + '/show' )=article.title
+              p=article.excerpt
+          else
+            .light
+              h1
+                a(href="/articles/" + article._id + '/show' )=article.title
+              p=article.excerpt
+              
             
-          

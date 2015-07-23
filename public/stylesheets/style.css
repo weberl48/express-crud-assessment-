@@ -89,6 +89,7 @@ label {
 }
 
 .dark {
+  background-image: url(article.background);
   background-color: black;
   color: white;
   padding: 10px;
@@ -100,6 +101,7 @@ label {
 }
 .dark a:hover {
   color: red;
+
 
 }
 .light {

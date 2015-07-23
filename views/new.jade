@@ -5,26 +5,24 @@ block content
       h1 The Zine
     div.content
       div.form 
-        h1 New Article
-        each err in error
-          ul
-            li(class="error")
-              = err
-        //- for error in allErrors
-        //-   .error
-          
+          h1 New Article
+          if error
+            each err in error
+              ul
+                li(class="error")
+                  = err
         form(action="/articles" method="post")
-          label(for='title') Title
-          
-          input(type="text" name="title")
-          label(for='background') Background Image
-          input(type="text" name="background")
-          label(for="dark") Background image has dark colors
-          input(type="checkbox" name="dark")
-          label(for="excerpt") Excerpt
-          textarea( name="excerpt" )
-          label(for="body") Body
-          textarea(name="body")
-          input(type="submit" name="submit" value="Add Article" class="submit")
-          
+            label(for='title') Title
             
+            input(type="text" name="title")
+            label(for='background') Background Image
+            input(type="text" name="background")
+            label(for="dark") Background image has dark colors
+            input(type="checkbox" name="dark")
+            label(for="excerpt") Excerpt
+            textarea( name="excerpt" )
+            label(for="body") Body
+            textarea(name="body")
+            input(type="submit" name="submit" value="Add Article" class="submit")
+            
+              
