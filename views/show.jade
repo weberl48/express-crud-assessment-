@@ -4,9 +4,8 @@ block content
     div.header
       h1 The Zine
     div.content
-        for article in Article
-          div
-            h3 
-              a(href="/article/" + article._id + '/edit' ) Edit
-            h1=article.title
-            p=article.body
+        h3
+          a(href="/article/" + allArticles._id + "/edit") Edit
+        h1=allArticles.title
+        p=allArticles.body
+        p=allArticles.excerpt

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    div.header
+      h1 The Zine
+    div.content
+      div.form 
+        h1 Edit
+        hr
+        form(action="/articles" method="post")
+          label(for='title') Title
+          input(type="text" name="title" value=allArticles.title)
+          label(for='background') Background Image
+          input(type="text" name="background" )
+          label(for="dark") Background image has dark colors
+          input(type="checkbox" name="dark")
+          label(for="excerpt") Excerpt
+          textarea( name="excerpt" value="afgsdsdfgsdfgsdfgosifdjgisdfjgosidj")
+          label(for="body") body
+          textarea( name="body" value=allArticles.body)
+          input(type="submit" name="submit" value="Add Article")
+          input(type="submit" name="delete" value="Delete")

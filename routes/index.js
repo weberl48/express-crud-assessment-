@@ -20,15 +20,14 @@ router.get('/', function(req,res,next) {
 //READ
 router.get('/article/:id/show', function(req,res,next){
   articleCollection.findOne({_id:req.params.id}, function(err,record){
-    console.log(record);
-  res.render('show',{Article:record});
+  res.render('show',{allArticles:record});
   });
 });
 //READ
-router.get('article/:id/edit', function(req,res,next) {
+router.get('/article/:id/edit', function(req,res,next) {
   articleCollection.findOne({_id:req.params.id}, function(err,record){
     console.log(record);
-  res.render('update',{Article:record});
+  res.render('edit',{allArticles:record});
   });
 });
 
