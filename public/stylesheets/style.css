@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/background.png);
+}
+
+a {
+  color: #00B7FF;
+}
+form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+ label {
+  float:left;
+  text-align: right;
+  margin-right: 0.5em;
+  display:block;
+}
+input {
+    display:block;
+
+    margin-left: 4.5em;
+}
+
+.header h1 {
+  float:right;
+}
+.header {
+  height:100px;
+  background-image: url(../images/header.jpeg);
+  padding: 10px;
+
+}
+.content {
+background: #FFFFFF;
+padding:10px;
+
+}
+div {
+  margin:10px;
+  display:block;
+
+
+}
