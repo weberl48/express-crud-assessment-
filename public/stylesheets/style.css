@@ -79,3 +79,31 @@ label {
   width:10%;
   margin:10px;
 }
+.new {
+  background-color: white;
+  padding: 10px;
+  width: 97%
+}
+.error {
+  color: red;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 97%;
+}
+.dark a {
+  color: white;
+
+}
+.dark a:hover {
+  color: red;
+
+}
+.light {
+  background-color: white;
+  padding: 10px;
+  width: 97%
+}

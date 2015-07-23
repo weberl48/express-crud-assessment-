@@ -2,14 +2,23 @@ var express = require('express');
 var router = express.Router();
 var db =require('monk')(process.env.MONGOLAG_URI || "localhost/articles");
 var articleCollection = db.get('articles');
+var validate = require('../lib/logic.js');
+var dom = require('../public/javascripts/dom.js');
 
 
 /* GET home page. */
 //CREATE
 router.post('/articles', function(req,res,next){
+  var dom = require('../public/javascripts/dom.js');
   var b = req.body;
+  var locals = validate(b);
+  console.log(b.dark);
+  if (locals.errors.length > 0) {
+    res.render('new', {error: locals.errors});
+  } else {
   articleCollection.insert({title:b.title, background:b.background, dark:b.dark, body:b.body,excerpt:b.excerpt});
-  res.redirect('/view');
+  res.redirect('/');
+}
 });
 //READ
 router.get('/', function(req,res,next) {

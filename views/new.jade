@@ -6,9 +6,16 @@ block content
     div.content
       div.form 
         h1 New Article
-        hr
+        each err in error
+          ul
+            li(class="error")
+              = err
+        //- for error in allErrors
+        //-   .error
+          
         form(action="/articles" method="post")
           label(for='title') Title
+          
           input(type="text" name="title")
           label(for='background') Background Image
           input(type="text" name="background")
