@@ -14,7 +14,10 @@ block content
           label(for='background') Background Image
           input(type="text" name="background" )
           label(for="dark") Background image has dark colors
-          input(type="checkbox" name="dark")
+          if allArticles.dark
+            input(type="checkbox" name="dark" checked="true" )
+          else
+            input(type="checkbox" name="dark"  )
           label(for="excerpt") Excerpt
           textarea( name="excerpt")=allArticles.excerpt
             
