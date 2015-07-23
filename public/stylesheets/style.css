@@ -114,11 +114,13 @@ label {
   background-color:white;
   width:100%;
   margin:0 auto;
+  padding:10px;
 }
 .headingDark {
   background-color: black;
   width 100%;
   margin:0 auto;
+  padding:10px;
 }
 
 .dark p {
