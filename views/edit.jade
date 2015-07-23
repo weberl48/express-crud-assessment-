@@ -7,7 +7,7 @@ block content
       div.form 
         h1 Edit
         hr
-        form(action="/articles" method="post")
+        form(action="/articles/" + allArticles._id + "/delete" method="post")
           label(for='title') Title
           input(type="text" name="title" value=allArticles.title)
           label(for='background') Background Image
@@ -15,8 +15,9 @@ block content
           label(for="dark") Background image has dark colors
           input(type="checkbox" name="dark")
           label(for="excerpt") Excerpt
-          textarea( name="excerpt" value="afgsdsdfgsdfgsdfgosifdjgisdfjgosidj")
+          textarea( name="excerpt")=allArticles.excerpt
+            
           label(for="body") body
-          textarea( name="body" value=allArticles.body)
-          input(type="submit" name="submit" value="Add Article")
-          input(type="submit" name="delete" value="Delete")
+          textarea( name="body" )=allArticles.body
+          input(type="submit" name="submit" value="Add Article" class="submit")
+          input(type="submit" name="delete" value="Delete" class="delete")

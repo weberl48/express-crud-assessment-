@@ -72,3 +72,10 @@ label {
   width:10%;
   margin:10px;
 }
+
+.delete {
+  background-color: red;
+  color:white;
+  width:10%;
+  margin:10px;
+}
