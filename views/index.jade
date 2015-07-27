@@ -15,12 +15,13 @@ block content
               .headingDark
                 h1
                   a(href="/articles/" + article._id + '/show' )=article.title
-              p=article.excerpt
+                p=article.excerpt
           else
             .light
               .headingLight
                 h1
                   a(href="/articles/" + article._id + '/show' )=article.title
-              p=article.excerpt
+              p
+                  a(href="/articles/" + article._id + '/show' )=article.excerpt
               
             

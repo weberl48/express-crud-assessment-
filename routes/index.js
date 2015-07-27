@@ -11,7 +11,7 @@ var para = require ('../lib/para.js');
 router.post('/articles', function(req, res, next) {
     var b = req.body;
     var locals = validate(b);
-    if (locals.errors.length > 0) {
+    if (locals.errors.length > 1) {
         res.render('new', {
             error: locals.errors
         });
@@ -67,7 +67,7 @@ router.get('/articles/new', function(req, res, next) {
 router.post('/articles/:id/edit', function(req, res, next) {
     var b = req.body;
     var locals = validate(b);
-    if(locals.errors.length > 0){
+    if(locals.errors.length > 1){
       articleCollection.findOne({
           _id: req.params.id
       }, function(err, record) {
