@@ -8,20 +8,27 @@ block content
       div.form 
         h1 Edit
         hr
-        form(action="/articles/" + allArticles._id + "/delete" method="post")
-          label(for='title') Title
-          input(type="text" name="title" value=allArticles.title)
-          label(for='background') Background Image
-          input(type="text" name="background" )
-          label(for="dark") Background image has dark colors
-          if allArticles.dark
-            input(type="checkbox" name="dark" checked="true" )
-          else
-            input(type="checkbox" name="dark"  )
-          label(for="excerpt") Excerpt
-          textarea( name="excerpt")=allArticles.excerpt
-            
-          label(for="body") body
-          textarea( name="body" )=allArticles.body
-          input(type="submit" name="submit" value="Add Article" class="submit")
-          input(type="submit" name="delete" value="Delete" class="delete")
+        if error
+          each err in error
+            ul
+              li(class="error")
+                = err
+        div
+          form(action="/articles/" + allArticles._id + "/edit" method="post")
+            label(for='title') Title
+            input(type="text" name="title" value=allArticles.title )
+            label(for='background') Background Image
+            input(type="text" name="background" )
+            label(for="dark") Background image has dark colors
+            if allArticles.dark
+              input(type="checkbox" name="dark" checked="true" )
+            else
+              input(type="checkbox" name="dark"  )
+            label(for="excerpt") Excerpt
+            textarea( name="excerpt")=allArticles.excerpt
+            label(for="body") body
+            textarea( name="body" )=allArticles.body
+            input(type="submit" name="submit" value="Add Article" class="submit")
+        div
+          form(action="/articles/" + allArticles._id + "/delete" method="post")
+            input(type="submit" name="delete" value="Delete" class="delete")
